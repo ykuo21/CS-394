@@ -1,0 +1,222 @@
+/* styles.css for University Recertification Form JavaFX Application */
+
+/* Root styling */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f5f5f5;
+}
+
+/* Title styling */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a365d;
+    -fx-padding: 10 0 5 0;
+}
+
+.subtitle-label {
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+    -fx-text-fill: #4a5568;
+}
+
+/* Section styling */
+.titled-pane {
+    -fx-text-fill: #2d3748;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #e6f0ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.titled-pane > .content {
+    -fx-background-color: white;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 0 0 4 4;
+}
+
+/* Form field labels */
+.label {
+    -fx-font-weight: normal;
+    -fx-text-fill: #2d3748;
+    -fx-padding: 8 0 2 0;
+}
+
+/* Section labels */
+.section-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c5282;
+    -fx-padding: 15 0 5 0;
+    -fx-border-color: transparent transparent #e2e8f0 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.section-info {
+    -fx-font-style: italic;
+    -fx-text-fill: #4a5568;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Text inputs */
+.text-field, .text-area, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 4;
+    -fx-padding: 8;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-border-color: #3182ce;
+    -fx-effect: dropshadow(gaussian, rgba(49, 130, 206, 0.25), 4, 0, 0, 0);
+}
+
+.text-area {
+    -fx-wrap-text: true;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+}
+
+/* Date picker */
+.date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 4;
+}
+
+.date-picker:focused {
+    -fx-border-color: #3182ce;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #edf2f7;
+    -fx-border-color: #cbd5e0;
+}
+
+/* Combo box */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 4;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 6 10 6 10;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e0;
+}
+
+.combo-box-popup .list-cell {
+    -fx-padding: 6 10 6 10;
+    -fx-background-color: white;
+}
+
+.combo-box-popup .list-cell:filled:selected,
+.combo-box-popup .list-cell:filled:selected:hover {
+    -fx-background-color: #3182ce;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-cell:filled:hover {
+    -fx-background-color: #e6f0ff;
+}
+
+/* Check box and radio button */
+.check-box, .radio-button {
+    -fx-padding: 4;
+}
+
+.check-box .box, .radio-button .radio {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 3;
+}
+
+.radio-button .radio {
+    -fx-border-radius: 100;
+}
+
+.check-box:selected .mark, .radio-button:selected .dot {
+    -fx-background-color: white;
+}
+
+.check-box:selected .box, .radio-button:selected .radio {
+    -fx-background-color: #3182ce;
+    -fx-border-color: #3182ce;
+}
+
+/* Buttons */
+.button {
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.primary-button {
+    -fx-background-color: #3182ce;
+    -fx-text-fill: white;
+}
+
+.primary-button:hover {
+    -fx-background-color: #2b6cb0;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #2c5282;
+}
+
+.secondary-button {
+    -fx-background-color: #edf2f7;
+    -fx-text-fill: #2d3748;
+    -fx-border-color: #cbd5e0;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #e2e8f0;
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #cbd5e0;
+}
+
+/* VBox and HBox containers */
+.vbox, .hbox {
+    -fx-spacing: 10;
+}
+
+/* Role-specific containers */
+#studentFields, #facultyFields, #staffFields {
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-color: #f9fafb;
+    -fx-padding: 15;
+}
+
+/* Alert styling */
+.alert {
+    -fx-background-color: white;
+}
+
+.alert .header-panel {
+    -fx-background-color: #e6f0ff;
+}
+
+.alert .content {
+    -fx-padding: 15;
+}
+
+/* Required field marker */
+.label:after {
+    -fx-text-fill: #e53e3e;
+}
